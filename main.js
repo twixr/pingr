@@ -76,7 +76,7 @@ const checkUrl = async (url) => {
     if (offlineData[url].counter >= Number(config.notify_treshold || 5) && offlineData[url].notified !== true) {
       offlineData[url].notified = true;
       offlineData[url].timestamp_last_retry = new Date().valueOf();
-      notifySMS('SERVER OFFLINE!\nServer: ' + url + '\nError: ' + error + '\nSince: ' + offlineData[url].offline_since + '\nCurrent time:', new Date());
+      notifySMS('SERVER OFFLINE!\nServer: ' + url + '\nError: ' + error + '\nSince: ' + offlineData[url].offline_since + '\nCurrent time:', new Date().toString());
       if (config.call_notification === true) {
         notifyCall();
       }
@@ -85,7 +85,7 @@ const checkUrl = async (url) => {
   } finally {
     if (online === true) {
       if (offlineData[url] && offlineData[url].counter >= Number(config.notify_treshold || 5)) {
-        notifySMS('Server back online!\nServer: ' + url + '\nOffline since: ' + offlineData[url].offline_since + '\nCurrent time:', new Date());
+        notifySMS('Server back online!\nServer: ' + url + '\nOffline since: ' + offlineData[url].offline_since + '\nCurrent time:', new Date().toString());
         console.log(new Date(), 'site ONLINE after ' + offlineData[url].counter + ' offline detections. Site was offline since:', offlineData[url].offline_since);
       }
       if (offlineData[url]) {
