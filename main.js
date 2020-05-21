@@ -84,7 +84,7 @@ const checkUrl = async (url) => {
     }
   } finally {
     if (online === true) {
-      if (offlineData[url] && offlineData[url].counter > Number(config.notify_treshold || 5)) {
+      if (offlineData[url] && offlineData[url].counter >= Number(config.notify_treshold || 5)) {
         notifySMS('Server back online!\nServer: ' + url + '\nOffline since: ' + offlineData[url].offline_since + '\nCurrent time:', new Date());
         console.log(new Date(), 'site ONLINE after ' + offlineData[url].counter + ' offline detections. Site was offline since:', offlineData[url].offline_since);
       }
