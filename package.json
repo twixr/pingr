@@ -1,0 +1,32 @@
+{
+  "name": "pingr",
+  "version": "0.1.0",
+  "description": "Pingr - Get notified when your server goes down",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twixr/pingr.git"
+  },
+  "keywords": [
+    "ping",
+    "server",
+    "offline",
+    "monitoring",
+    "call",
+    "twilio",
+    "devops"
+  ],
+  "author": "Twixr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twixr/pingr/issues"
+  },
+  "homepage": "https://github.com/twixr/pingr#readme",
+  "dependencies": {
+    "got": "^11.1.4",
+    "twilio": "^3.43.1"
+  }
+}

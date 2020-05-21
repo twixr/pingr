@@ -1,0 +1,14 @@
+{
+  "urls": ["https://yourdomain.com"],
+  "url_timeout_ms": 1500,
+  "check_interval_in_seconds": 10,
+  "retry_after_offline_interval_in_seconds": 60,
+  "notify_treshold": 5,
+  "call_notification": true,
+  "twilio": {
+    "account_sid": "",
+    "auth_token": "",
+    "sender": "+31",
+    "receipient": "+31"
+  }
+}
