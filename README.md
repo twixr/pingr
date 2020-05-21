@@ -1,2 +1,2 @@
 # pingr
-Pingr - Get notified when you server goes down
+Pingr - Get notified when your server goes down
